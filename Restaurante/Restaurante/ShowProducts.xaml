@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurante.ShowProducts"
+             Title="Productos" BackgroundImageSource="https://www.gratistodo.com/wp-content/uploads/2017/02/degradados-wallpapers-5.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar
+                Placeholder="Buscar Producto"
+                x:Name="Bar" TextChanged="Bar_OnTextChanged" TextTransform="Uppercase" PlaceholderColor="BurlyWood"
+                TextColor="BurlyWood"  BackgroundColor="SaddleBrown"></SearchBar>
+            <ListView x:Name="ListProducts">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid BackgroundColor="AntiqueWhite" Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding IdProduct}" VerticalTextAlignment="Center"
+                                           TextColor="DarkRed" FontSize="Body"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding NameProduct}" VerticalTextAlignment="Center"
+                                           TextColor="DarkRed" FontSize="Body" TextTransform="Uppercase"></Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding PriceProduct}" VerticalTextAlignment="Center"
+                                           TextColor="DarkRed" FontSize="Body" TextTransform="Uppercase"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="GoReg" Text="Ir a registro" Clicked="GoReg_OnClicked" CornerRadius="50" Margin="20" TextColor="SaddleBrown"
+                    BackgroundColor="BurlyWood" BorderWidth="2" BorderColor="SaddleBrown"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

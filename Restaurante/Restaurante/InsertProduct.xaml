@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurante.InsertProduct"
+             Title="Registro de Productos" BackgroundImageSource="https://www.gratistodo.com/wp-content/uploads/2017/02/degradados-wallpapers-5.jpg">
+    <ScrollView x:Name="listView">
+        <StackLayout>
+            <Label Text="Registro de Productos" HorizontalTextAlignment="Center"
+               Margin="20" FontSize="Title" TextColor="BurlyWood" FontAttributes="Bold" TextDecorations="Underline"/>
+            <Image Source="https://www.cartoonbucket.com/wp-content/uploads/2016/03/Pizza-Steve-Holding-Sirens-ldg419-600x471.png"
+               WidthRequest="200"></Image>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0"  CornerRadius="50" Padding="10" BackgroundColor="BurlyWood"
+                       BorderColor="SaddleBrown" Margin="20">
+                    <Entry x:Name="txtId" Placeholder="Id del Producto" Keyboard="Numeric"
+                           PlaceholderColor="SaddleBrown" HorizontalTextAlignment="Center" TextColor="DarkRed"></Entry>
+                </Frame>
+                <Frame Grid.Row="1" CornerRadius="50" Padding="10" BackgroundColor="BurlyWood"
+                       BorderColor="SaddleBrown" Margin="20">
+                    <Entry x:Name="txtName" Placeholder="Nombre del Producto" TextTransform="Uppercase"
+                       PlaceholderColor="SaddleBrown" HorizontalTextAlignment="Center" TextColor="DarkRed"
+                       Keyboard="Text"></Entry>
+                </Frame>
+                <Frame Grid.Row="2"  CornerRadius="50" Padding="10" BackgroundColor="BurlyWood"
+                   BorderColor="SaddleBrown" Margin="20">
+                    <Entry x:Name="txtPrice" Placeholder="Precio del Producto" Keyboard="Numeric"
+                       PlaceholderColor="SaddleBrown" HorizontalTextAlignment="Center" TextColor="DarkRed"></Entry>
+                </Frame>
+                <Frame Grid.Row="3" CornerRadius="50" Padding="10" BackgroundColor="BurlyWood"
+                   BorderColor="SaddleBrown" Margin="20">
+                    <Entry x:Name="txtQuanty" Placeholder="Cantidad del Producto" Keyboard="Numeric"
+                                       PlaceholderColor="SaddleBrown" HorizontalTextAlignment="Center" TextColor="DarkRed"></Entry>
+                </Frame>
+                <Frame Grid.Row="4" CornerRadius="50" Padding="10" BackgroundColor="BurlyWood"
+                   BorderColor="SaddleBrown" Margin="20">
+                    <Editor x:Name="txtDescrip" Placeholder="Descripcion del Producto" TextTransform="Uppercase"
+                        PlaceholderColor="SaddleBrown" AutoSize="TextChanges" IsTextPredictionEnabled="True" TextColor="DarkRed"
+                        Keyboard="Text">
+                    </Editor>
+                </Frame>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            
+            <Frame CornerRadius="50" Padding="0" HorizontalOptions="Center" BackgroundColor="BurlyWood"
+               BorderColor="SaddleBrown" Margin="20,20,20,50" WidthRequest="200">
+                <Button Text="Registrar" x:Name="btnRegister" Clicked="BtnRegister_OnClicked" BackgroundColor="Transparent"
+                    VerticalOptions="Center" TextColor="SaddleBrown"></Button>
+            </Frame>
+            <Frame Grid.Column="1" CornerRadius="50" Padding="0" HorizontalOptions="Center" BackgroundColor="BurlyWood"
+                   BorderColor="SaddleBrown" Margin="20,0,20,50" WidthRequest="200">
+                <Button Text="Buscar un Producto" x:Name="btnSearchOne" Clicked="SearchOne" BackgroundColor="Transparent"
+                        VerticalOptions="Center" TextColor="SaddleBrown"></Button>
+            </Frame>
+                <Frame Grid.Column="2" CornerRadius="50" Padding="0" HorizontalOptions="Center" BackgroundColor="BurlyWood"
+                       BorderColor="SaddleBrown" Margin="20,0,20,50" WidthRequest="200">
+                    <Button Text="Editar producto" x:Name="btnEdit" Clicked="BtnEdit_OnClicked" BackgroundColor="Transparent"
+                            VerticalOptions="Center" TextColor="SaddleBrown"></Button>
+                </Frame>
+            </Grid>
+            <Frame CornerRadius="50" Padding="0" HorizontalOptions="Center" BackgroundColor="BurlyWood"
+                   BorderColor="SaddleBrown" Margin="20,0,20,50" WidthRequest="200">
+                <Button Text="Eliminar producto" x:Name="btnDelete" Clicked="BtnDelete_OnClicked" BackgroundColor="Transparent"
+                        VerticalOptions="Center" TextColor="SaddleBrown"></Button>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

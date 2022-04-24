@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurante.DetailsProduct"
+             Title="Detalles" BackgroundImageSource="https://www.gratistodo.com/wp-content/uploads/2017/02/degradados-wallpapers-5.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid x:Name="detailProduct" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="NameCall" TextTransform="Uppercase" HorizontalTextAlignment="Center"
+                           FontSize="Title" TextColor="BurlyWood" Margin="20" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <RelativeLayout Grid.Row="1">
+                        <Image Source="https://cdn-icons-png.flaticon.com/512/1/1755.png"
+                               WidthRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,
+                                        Factor=0.45}"></Image>
+                    </RelativeLayout>
+                    <Frame Grid.Row="2" Padding="0" CornerRadius="50" Margin="20,20,20,0"
+                           BorderColor="SaddleBrown" HasShadow="True" BackgroundColor="AntiqueWhite" HorizontalOptions="Center"
+                           WidthRequest="300">
+                        <StackLayout>
+                            <Grid  Margin="20" ColumnSpacing="0" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="Precio: $" FontSize="Body" HorizontalTextAlignment="End" TextColor="Black"></Label>
+                                <Label Grid.Row="0" Grid.Column="1" x:Name="PriceCall" FontSize="Body" HorizontalTextAlignment="Start"
+                                       TextColor="Black"/>
+                                <Label  Grid.Row="1" Grid.Column="0"  Text="Cantidad: " FontSize="Body" HorizontalTextAlignment="End"
+                                        TextColor="Black"></Label>
+                                <Label Grid.Row="1" Grid.Column="1" x:Name="QuantyCall" FontSize="Body" TextColor="Black" />
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="3" Margin="20" BorderColor="SaddleBrown" BackgroundColor="BlanchedAlmond">
+                        <Label x:Name="DescriptionCall" TextTransform="Uppercase" HorizontalTextAlignment="Center"
+                               TextColor="Black"/>
+                    </Frame>
+                </Grid>
+                <Button x:Name="GoPro" Text="Atras" Clicked="GoPro_OnClicked" WidthRequest="150" BorderColor="SaddleBrown"
+                        BorderWidth="2" CornerRadius="50" Margin="20" TextColor="SaddleBrown" BackgroundColor="BurlyWood"
+                        Padding="0" VerticalOptions="End" HorizontalOptions="Center"></Button>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

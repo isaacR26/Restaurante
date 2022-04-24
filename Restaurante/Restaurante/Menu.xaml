@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurante.Menu"
+             Title="Menu" BackgroundImageSource=
+             "https://img.freepik.com/vector-gratis/composicion-fondo-degradado-suave-borrosa-moderna-azul-claro_1053-1199.jpg?w=740">
+
+    <StackLayout>
+        <Grid ColumnDefinitions="*">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="PizzaSteve"  FontFamily="Lobster" HorizontalTextAlignment="Center" Margin="0,20,0,0"
+                    TextColor="#F56618" FontSize="50"></Label>
+            <StackLayout Grid.Row="1" Margin="0,50,0,100">
+                <Button  Text="Productos" x:Name="ShowProduct" Clicked="ShowProduct_OnClicked"
+                        TextColor="#F4796C" CornerRadius="50" WidthRequest="200" HeightRequest="50" 
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="End" BorderColor="#E36251" BorderWidth="3"
+                        BackgroundColor="#F4DF74"></Button>
+            </StackLayout>
+
+            <Image Grid.Row="2" Source="https://imgs.search.brave.com/fVGzbldM3_-EtLsdTTCRwS8SYFJoL5GP6VHLt1GnxlY/rs:fit:1024:1200:1/g:ce/aHR0cHM6Ly9pbWcw/MC5kZXZpYW50YXJ0/Lm5ldC9kNTFmL2kv/MjAxNC8xMzYvOS8x/L29uZV9jb29sX3Ns/aWNlX2J5X211dHRt/dW5jaC1kN2luNmtr/LnBuZw"
+                   VerticalOptions="Start" ></Image>
+        </Grid>
+    </StackLayout>
+   
+    
+</ContentPage>
